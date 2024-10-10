@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wu Lab</title>
-    <!-- Website Icon -->
-    <link rel="icon" href="bacteria-icon-optimized.svg" type="image/x-icon" />
+    <link rel="icon" href="your-favicon.ico" type="image/x-icon" />
     <style>
       body {
         font-family: 'Arial', sans-serif;
         line-height: 1.6;
-        margin: 10;
+        margin: 0;
         padding: 0;
         background-color: #f4f4f9;
       }
@@ -56,9 +55,9 @@
       }
 
       main {
-        padding: 60px; /* Increase padding to center content */
+        padding: 60px;
         max-width: 1200px;
-        margin: 0 auto; /* Center the content on the page */
+        margin: 0 auto; /* Center the content */
       }
 
       footer {
@@ -101,14 +100,16 @@
         margin: 0;
       }
 
-      /* News modules with increased spacing and margin */
+      /* Increased page margins for news section */
       .news-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px; /* Increase gap between modules */
+        gap: 40px;
         justify-content: space-between;
         margin-top: 20px;
-        margin: 50px 0;
+        max-width: 1000px; /* Limiting max width */
+        padding: 0 50px; /* Page-side margins */
+        margin: 0 auto;
       }
 
       .news-image {
