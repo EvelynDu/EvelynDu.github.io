@@ -1,70 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <body>
     <style>
-        body {
-            font-family: UNSII, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-         header {
-            background-color: #45C6E0;
-            color: #fff;
-            text-align: center;
-            padding: 5rem;
-        }
-        nav {
-            background-color: #FDF6DA;
-            padding: 0.5rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #FDF6DA;
-            color: #333;
-            text-align: center;
-            padding: 0.5rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+      body {
+        font-family: UNSII, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #45c6e0;
+        color: #fff;
+        text-align: center;
+        padding: 5rem;
+      }
+
+      nav {
+        background-color: #fdf6da;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 20px; /* 控制导航选项之间的间距 */
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: all 0.3s ease; /* 添加平滑过渡效果 */
+      }
+
+      nav ul li a:hover {
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #fdf6da;
+        color: #333;
+        text-align: center;
+        padding: 0.5rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* 插入图片的样式 */
+      .image-container {
+        text-align: center; /* 图片居中显示 */
+        margin: 20px 0;
+      }
+
+      .image-container img {
+        max-width: 100%; /* 确保图片不会超过页面宽度 */
+        height: auto; /* 保持图片的纵横比 */
+      }
     </style>
-</head>
-<body>
+
     <header>
-        <h1>Welcome to My Lab</h1>
+      <h1>Welcome to My Lab</h1>
     </header>
+
     <nav>
-        <ul>
-            <li><a href=" ">NEWS</a ></li>
-            <li><a href="#about">GROUPS</a ></li>
-            <li><a href="#services">PUBLICATIONS</a ></li>
-            <li><a href="#contact">CONTACT</a ></li>
-        </ul>
+      <ul>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#groups">GROUPS</a></li>
+        <li><a href="#publications">PUBLICATIONS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </nav>
+
     <main>
-        <h2>About Us</h2>
-        <p>This is a basic website template. You can add your own content here.</p >
+      <h2>About Us</h2>
+      <p>This is a basic website template. You can add your own content here.</p>
+
+      <!-- 图片插入示例 -->
+      <div class="image-container">
+        <img src="your-image-url.jpg" alt="Description of image" />
+        <!-- 替换your-image-url.jpg为实际的图片URL -->
+      </div>
     </main>
+
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p >
+      <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
