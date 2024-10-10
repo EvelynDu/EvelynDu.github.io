@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <style>
+        /* 添加基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">关于</a>
+            <a href="blog.html">博客</a>
+            <a href="contact.html">联系</a>
+        </nav>
+        <main>
+            <h1>欢迎来到我的网站</h1>
+            <p>这是我的个人网站首页。</p>
+        </main>
+    </div>
+</body>
+</html>
