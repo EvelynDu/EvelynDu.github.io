@@ -7,6 +7,7 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
+        background-color: #f4f4f9; /* Light background */
       }
 
       header {
@@ -62,16 +63,37 @@
         width: 100%;
       }
 
-      /* Home image reduced to 50% */
+      /* Home image centered with rounded corners */
+      .home-image {
+        text-align: center; /* Centering the image */
+        margin: 20px 0;
+      }
+
       .home-image img {
         max-width: 50%;
         height: auto;
+        border-radius: 15px; /* Adding rounded corners */
       }
 
-      /* News image reduced to 30% */
+      /* News module with shadow effect */
+      .news-image {
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
+        transition: transform 0.3s ease; /* Smooth hover animation */
+      }
+
       .news-image img {
-        max-width: 30%;
+        max-width: 70%; /* Adjusted image size */
         height: auto;
+        border-radius: 10px; /* Adding rounded corners */
+      }
+
+      .news-image:hover {
+        transform: scale(1.03); /* Slight zoom effect on hover */
       }
 
       /* Staff module for Groups section */
@@ -83,6 +105,12 @@
         border: 1px solid #ccc;
         padding: 10px;
         width: 150px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .staff-module:hover {
+        transform: scale(1.03); /* Zoom on hover */
       }
 
       .staff-photo {
@@ -90,6 +118,7 @@
         height: 120px;
         object-fit: cover;
         margin-bottom: 10px;
+        border-radius: 10px;
       }
 
       .staff-name {
