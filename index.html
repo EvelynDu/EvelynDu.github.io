@@ -57,7 +57,7 @@
       main {
         padding: 60px;
         max-width: 1200px;
-        margin: 0 auto; /* Center the content */
+        margin: 0 auto;
       }
 
       footer {
@@ -70,7 +70,7 @@
         width: 100%;
       }
 
-      /* Home image centered with rounded corners */
+      /* Home image centered with rounded corners and overlay for text */
       .home-image {
         text-align: center;
         margin: 20px 0;
@@ -83,7 +83,17 @@
         border-radius: 15px;
       }
 
-      /* Text overlay on image */
+      /* Semi-transparent overlay behind text */
+      .home-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        border-radius: 15px;
+      }
+
       .home-text-overlay {
         position: absolute;
         top: 50%;
@@ -93,6 +103,7 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         font-size: 24px;
         text-align: center;
+        z-index: 1; /* Ensure text stays above the overlay */
       }
 
       .home-text-overlay h2 {
@@ -100,15 +111,15 @@
         margin: 0;
       }
 
-      /* Increased page margins for news section */
+      /* News container and modules with increased spacing */
       .news-container {
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
         justify-content: space-between;
         margin-top: 20px;
-        max-width: 1000px; /* Limiting max width */
-        padding: 0 50px; /* Page-side margins */
+        max-width: 1000px;
+        padding: 0 50px;
         margin: 0 auto;
       }
 
@@ -118,7 +129,7 @@
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 45%; /* Two modules per row */
+        width: calc(50% - 20px); /* Ensure two modules per row */
         transition: transform 0.3s ease;
       }
 
@@ -198,6 +209,7 @@
     <main id="home">
       <div class="home-image">
         <img src="IMG_2042.jpg" alt="Description of image" />
+        <div class="home-overlay"></div> <!-- Overlay for better contrast -->
         <div class="home-text-overlay">
           <h2>About Us</h2>
           <p>
@@ -268,7 +280,4 @@
       });
 
       // Show home section by default
-      document.getElementById('home').style.display = 'block';
-    </script>
-  </body>
-</html>
+      document
