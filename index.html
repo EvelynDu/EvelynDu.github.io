@@ -96,6 +96,21 @@
         color: #333;
         margin-top: 10px;
       }
+
+      .back-button {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #215088;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #333;
+      }
     </style>
 
     <header>
@@ -104,6 +119,7 @@
 
     <nav>
       <ul>
+        <li><a href="#home">HOME</a></li>
         <li><a href="#news">NEWS</a></li>
         <li><a href="#groups">GROUPS</a></li>
         <li><a href="#publications">PUBLICATIONS</a></li>
@@ -140,6 +156,9 @@
         <h3>Publication in High-Impact Journal</h3>
         <p>Our latest work has been published in XYZ Journal. This paper highlights...</p>
       </div>
+
+      <!-- Back to home button -->
+      <a href="#home" class="back-button">Back to Home</a>
     </section>
 
     <footer>
