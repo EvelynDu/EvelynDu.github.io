@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wu Lab</title>
     <!-- Website Icon -->
-    <link rel="icon" href="your-favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="pseudomonas-pili-icon.svg" type="image/x-icon" />
     <style>
       body {
         font-family: 'Arial', sans-serif;
@@ -56,7 +56,9 @@
       }
 
       main {
-        padding: 40px;
+        padding: 60px; /* Increase padding to center content */
+        max-width: 1200px;
+        margin: 0 auto; /* Center the content on the page */
       }
 
       footer {
@@ -73,34 +75,38 @@
       .home-image {
         text-align: center;
         margin: 20px 0;
+        position: relative;
       }
 
       .home-image img {
-        max-width: 50%;
+        max-width: 100%;
         height: auto;
         border-radius: 15px;
       }
 
-      /* Enhanced home section typography */
-      .home-text h2 {
-        font-size: 32px;
-        color: #215088;
+      /* Text overlay on image */
+      .home-text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        font-size: 24px;
         text-align: center;
-        font-weight: bold;
       }
 
-      .home-text p {
-        font-size: 20px;
-        text-align: center;
-        color: #555;
+      .home-text-overlay h2 {
+        font-size: 40px;
+        margin: 0;
       }
 
-      /* News modules */
+      /* News modules with increased spacing and margin */
       .news-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-around;
+        gap: 40px; /* Increase gap between modules */
+        justify-content: space-between;
         margin-top: 20px;
       }
 
@@ -110,7 +116,7 @@
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 45%; /* Adjust size for two modules per row */
+        width: 45%; /* Two modules per row */
         transition: transform 0.3s ease;
       }
 
@@ -188,17 +194,17 @@
 
     <!-- Home Section -->
     <main id="home">
-      <div class="home-text">
-        <h2>About Us</h2>
-        <p>
-          Focusing on the study of bacterial molecular biology and infectious diseases, including:<br />
-          1. Mechanism of drug resistance of Pseudomonas aeruginosa and regulation of pathogenic gene expression;<br />
-          2. Signaling in the host's innate immunity;<br />
-          3. Research and development of Pseudomonas aeruginosa vaccine.
-        </p>
-      </div>
       <div class="home-image">
         <img src="IMG_2042.jpg" alt="Description of image" />
+        <div class="home-text-overlay">
+          <h2>About Us</h2>
+          <p>
+            Focusing on the study of bacterial molecular biology and infectious diseases, including:<br />
+            1. Mechanism of drug resistance of Pseudomonas aeruginosa and regulation of pathogenic gene expression;<br />
+            2. Signaling in the host's innate immunity;<br />
+            3. Research and development of Pseudomonas aeruginosa vaccine.
+          </p>
+        </div>
       </div>
     </main>
 
@@ -241,7 +247,7 @@
     </section>
 
     <footer>
-      <p>&copy; All rights reserved.</p>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
 
     <script>
