@@ -27,7 +27,7 @@
         list-style-type: none;
         padding: 0;
         display: flex;
-        gap: 20px; /* 控制导航选项之间的间距 */
+        gap: 20px;
       }
 
       nav ul li {
@@ -39,7 +39,7 @@
         color: #333;
         font-size: 18px;
         padding: 10px 20px;
-        transition: all 0.3s ease; /* 添加平滑过渡效果 */
+        transition: all 0.3s ease;
       }
 
       nav ul li a:hover {
@@ -62,15 +62,39 @@
         width: 100%;
       }
 
-      /* 插入图片的样式 */
       .image-container {
-        text-align: center; /* 图片居中显示 */
+        text-align: center;
         margin: 20px 0;
       }
 
       .image-container img {
-        max-width: 100%; /* 确保图片不会超过页面宽度 */
-        height: auto; /* 保持图片的纵横比 */
+        max-width: 100%;
+        height: auto;
+      }
+
+      .module {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .module img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .module h3 {
+        margin: 0;
+        color: #215088;
+      }
+
+      .module p {
+        color: #333;
+        margin-top: 10px;
       }
     </style>
 
@@ -87,19 +111,59 @@
       </ul>
     </nav>
 
-    <main>
+    <main id="home">
       <h2>About Us</h2>
       <p>This is a basic website template. You can add your own content here.</p>
 
-      <!-- 图片插入示例 -->
       <div class="image-container">
         <img src="your-image-url.jpg" alt="Description of image" />
-        <!-- 替换your-image-url.jpg为实际的图片URL -->
       </div>
     </main>
+
+    <section id="news" style="display: none;"> <!-- Initially hidden -->
+      <h2>Latest News</h2>
+
+      <div class="module">
+        <img src="news-image1.jpg" alt="News 1" />
+        <h3>Exciting Research Breakthrough</h3>
+        <p>Our lab has made a major breakthrough in phage defense research. Read more about the discovery...</p>
+      </div>
+
+      <div class="module">
+        <img src="news-image2.jpg" alt="News 2" />
+        <h3>New Collaboration Announced</h3>
+        <p>We are excited to announce our collaboration with ABC University on cutting-edge genome engineering technologies.</p>
+      </div>
+
+      <div class="module">
+        <img src="news-image3.jpg" alt="News 3" />
+        <h3>Publication in High-Impact Journal</h3>
+        <p>Our latest work has been published in XYZ Journal. This paper highlights...</p>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Function to handle navigation click and display relevant sections
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          // Hide all sections
+          document.querySelectorAll('main, section').forEach(section => {
+            section.style.display = 'none';
+          });
+
+          // Show the clicked section
+          const sectionID = this.getAttribute('href').substring(1);
+          document.getElementById(sectionID).style.display = 'block';
+        });
+      });
+
+      // Default to showing home section
+      document.getElementById('home').style.display = 'block';
+    </script>
   </body>
 </html>
