@@ -54,10 +54,12 @@
         border-radius: 5px;
       }
 
-      main {
-        padding: 60px;
-        max-width: 1200px;
-        margin: 0 auto;
+      main, section {
+        display: none;
+      }
+
+      #home {
+        display: block;
       }
 
       footer {
@@ -173,7 +175,7 @@
         padding: 10px;
         width: 150px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+        border-radius: 15px;
         transition: transform 0.3s ease;
       }
 
@@ -258,11 +260,11 @@
 
     <nav>
       <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#news">NEWS</a></li>
-        <li><a href="#groups">GROUPS</a></li>
-        <li><a href="#publications">PUBLICATIONS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#home" onclick="showSection('home')">HOME</a></li>
+        <li><a href="#news" onclick="showSection('news')">NEWS</a></li>
+        <li><a href="#groups" onclick="showSection('groups')">GROUPS</a></li>
+        <li><a href="#publications" onclick="showSection('publications')">PUBLICATIONS</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">CONTACT</a></li>
       </ul>
     </nav>
 
@@ -284,7 +286,7 @@
     </main>
 
     <!-- News Section -->
-    <section id="news" style="display: none;">
+    <section id="news">
       <div class="news-container">
         <div class="news-image">
           <a href="https://academic.oup.com/nar/article/51/6/2691/7028288">
@@ -294,89 +296,96 @@
           </a>
         </div>
 
+                <div class="news-image">
+          <a href="https://academic.oup.com/nar/article/51/6/2691/7028288">
+            <img src="IMG_2041.PNG" alt="News 1" />
+            <h3>Regulatory and structural mechanisms of PvrA-mediated regulation of the PQS quorum-sensing system and PHA biosynthesis in Pseudomonas aeruginosa</h3>
+            <p>Authors: Xiaolei Pan, Han Liang, etc.</p>
+          </a>
+        </div>
+
         <div class="news-image">
-          <a href="https://www.example.com/news2">
-            <img src="news-image2.jpg" alt="News 2" />
-            <h3>New Collaboration Announced</h3>
-            <p>Exciting collaboration with ABC University.</p>
+          <a href="https://example.com/news-2">
+            <img src="IMG_2043.PNG" alt="News 2" />
+            <h3>Discovery of new pathways in bacterial immunity and infection control</h3>
+            <p>Authors: Jiaxin Wu, Li Zhang</p>
           </a>
         </div>
       </div>
-
-      <a href="#home" class="back-button">Back to Home</a>
     </section>
 
     <!-- Groups Section -->
-    <section id="groups" style="display: none;">
-      <h2 class="section-title">Advisors</h2>
+    <section id="groups">
+      <h2 class="section-title">Our Research Groups</h2>
       <div class="staff-row">
         <div class="staff-module">
-          <img src="advisor1.jpg" alt="Advisor 1" class="staff-photo" />
-          <div class="staff-name">Dr. Advisor Name</div>
+          <img src="IMG_2050.jpg" alt="Jiaxin Wu" class="staff-photo" />
+          <p class="staff-name">Jiaxin Wu</p>
+          <p>Principal Investigator</p>
         </div>
+
         <div class="staff-module">
-          <img src="advisor2.jpg" alt="Advisor 2" class="staff-photo" />
-          <div class="staff-name">Dr. Advisor Name</div>
+          <img src="IMG_2051.jpg" alt="Li Zhang" class="staff-photo" />
+          <p class="staff-name">Li Zhang</p>
+          <p>Senior Researcher</p>
         </div>
       </div>
 
-      <h2 class="section-title">Students</h2>
       <div class="staff-row">
         <div class="staff-module">
-          <img src="student1.jpg" alt="Student 1" class="staff-photo" />
-          <div class="staff-name">Student Name</div>
+          <img src="IMG_2052.jpg" alt="Han Liang" class="staff-photo" />
+          <p class="staff-name">Han Liang</p>
+          <p>Research Assistant</p>
         </div>
+
         <div class="staff-module">
-          <img src="student2.jpg" alt="Student 2" class="staff-photo" />
-          <div class="staff-name">Student Name</div>
+          <img src="IMG_2053.jpg" alt="Xiaolei Pan" class="staff-photo" />
+          <p class="staff-name">Xiaolei Pan</p>
+          <p>Graduate Student</p>
         </div>
       </div>
-
-      <a href="#home" class="back-button">Back to Home</a>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" style="display: none;">
+    <section id="publications">
       <div class="publication-module">
-        <h3>Publications</h3>
         <p>
-          Pan X, Liang H, et al. Regulatory and structural mechanisms of
-          PvrA-mediated regulation of the PQS quorum-sensing system and PHA
-          biosynthesis in <i>Pseudomonas aeruginosa</i>. <i>Journal of
-          Molecular Biology</i>, 2024, 12(1):123-135.
+          Pan, X., Liang, H., et al. (2023). Regulatory and structural mechanisms of PvrA-mediated regulation of the PQS quorum-sensing system and PHA biosynthesis in Pseudomonas aeruginosa. <i>Nucleic Acids Research</i>, 51(6), 2691-2705.
         </p>
       </div>
 
       <div class="publication-module">
         <p>
-          Li Z, Wang F, et al. Innate immune signaling in bacterial infection.
-          <i>Nature Reviews Microbiology</i>, 2024, 10(5):235-245.
+          Zhang, L., Wu, J., et al. (2022). A new mechanism in bacterial immunity: Discovering the role of protein X in infection control. <i>Cellular Microbiology</i>, 24(4), 678-689.
         </p>
       </div>
-
-      <a href="#home" class="back-button">Back to Home</a>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" style="display: none;">
+    <section id="contact">
       <div class="contact-module">
-        <img src="contact-image.jpg" alt="Contact Image" class="contact-image" />
+        <img src="IMG_2054.jpg" alt="Contact Person" class="contact-image" />
         <div class="contact-info">
-          <h3>Contact Us</h3>
-          <p>
-            Wu Lab<br />
-            Department of Biology, XYZ University<br />
-            Email: contact@wulab.org<br />
-            Phone: (123) 456-7890
-          </p>
+          <p><strong>Contact Person:</strong> Weihui Wu</p>
+          <p><strong>Email:</strong> wuweihui@mail.nankai.edu.cn</p>
+          <p><strong>Phone:</strong> +123 456 7890</p>
+          <p><strong>Address:</strong> Department of Microbiology, Nankai University, China</p>
         </div>
       </div>
-
-      <a href="#home" class="back-button">Back to Home</a>
     </section>
 
     <footer>
-      <p>&copy; 2024 Wu Lab. All rights reserved.</p>
+      <p>© 2024 Wu Lab. All rights reserved.</p>
     </footer>
+
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll("main, section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+        document.getElementById(sectionId).style.display = "block";
+      }
+    </script>
   </body>
 </html>
