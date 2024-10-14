@@ -58,7 +58,6 @@
         padding: 60px;
         max-width: 1200px;
         margin: 0 auto;
-        min-height: calc(100vh - 100px); /* Ensure footer is at the bottom */
       }
 
       footer {
@@ -66,10 +65,12 @@
         color: #333;
         text-align: center;
         padding: 0.5rem;
+        position: relative;
+        bottom: 0;
         width: 100%;
-        margin-top: 20px; /* Allow footer to appear after content */
       }
 
+      /* Home section */
       .home-image {
         text-align: center;
         margin: 20px 0;
@@ -109,12 +110,13 @@
         margin: 0;
       }
 
+      /* News section */
       .news-container {
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
         justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 40px;
         max-width: 1000px;
         padding: 0 50px;
         margin: 0 auto;
@@ -140,18 +142,26 @@
         transform: scale(1.03);
       }
 
-      /* Groups Section */
-      .group-title {
-        text-align: center;
-        font-size: 24px;
-        margin-top: 40px;
+      .news-image a {
+        text-decoration: none;
+        color: #215088;
       }
 
-      .group-container {
+      /* Groups section */
+      .section-title {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        text-align: center;
+        color: #215088;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+      }
+
+      .staff-row {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
+        gap: 40px;
+        margin-bottom: 40px;
       }
 
       .staff-module {
@@ -163,6 +173,7 @@
         padding: 10px;
         width: 150px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
         transition: transform 0.3s ease;
       }
 
@@ -181,6 +192,46 @@
       .staff-name {
         font-size: 16px;
         font-weight: bold;
+      }
+
+      /* Publications section */
+      .publication-module {
+        background-color: #f1f5f9;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 40px auto;
+        max-width: 800px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .publication-module p {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      /* Contact section */
+      .contact-module {
+        display: flex;
+        background-color: #f1f5f9;
+        padding: 20px;
+        margin: 40px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-image {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .contact-info {
+        font-size: 16px;
+        color: #333;
       }
 
       .back-button {
@@ -236,15 +287,15 @@
     <section id="news" style="display: none;">
       <div class="news-container">
         <div class="news-image">
-          <a href="https://example1.com" target="_blank">
+          <a href="https://www.example.com/news1">
             <img src="IMG_2041.PNG" alt="News 1" />
-            <h3>Regulation of the PQS quorum-sensing system</h3>
+            <h3>Regulatory and structural mechanisms of PvrA-mediated regulation of the PQS quorum-sensing system and PHA biosynthesis in Pseudomonas aeruginosa</h3>
             <p>Authors: Xiaolei Pan, Han Liang, etc.</p>
           </a>
         </div>
 
         <div class="news-image">
-          <a href="https://example2.com" target="_blank">
+          <a href="https://www.example.com/news2">
             <img src="news-image2.jpg" alt="News 2" />
             <h3>New Collaboration Announced</h3>
             <p>Exciting collaboration with ABC University.</p>
@@ -257,39 +308,67 @@
 
     <!-- Groups Section -->
     <section id="groups" style="display: none;">
-      <div class="group-title">Advisors</div>
-      <div class="group-container">
+      <h2 class="section-title">Advisors</h2>
+      <div class="staff-row">
         <div class="staff-module">
           <img src="advisor1.jpg" alt="Advisor 1" class="staff-photo" />
-          <p class="staff-name">Wu Weihui</p>
+          <div class="staff-name">Dr. Advisor Name</div>
         </div>
-
         <div class="staff-module">
           <img src="advisor2.jpg" alt="Advisor 2" class="staff-photo" />
-          <p class="staff-name">Jane Smith</p>
-        </div>
-
-        <div class="staff-module">
-          <img src="advisor3.jpg" alt="Advisor 3" class="staff-photo" />
-          <p class="staff-name">John Doe</p>
+          <div class="staff-name">Dr. Advisor Name</div>
         </div>
       </div>
 
-      <div class="group-title">Students</div>
-      <div class="group-container">
+      <h2 class="section-title">Students</h2>
+      <div class="staff-row">
         <div class="staff-module">
           <img src="student1.jpg" alt="Student 1" class="staff-photo" />
-          <p class="staff-name">Alice Johnson</p>
+          <div class="staff-name">Student Name</div>
         </div>
-
         <div class="staff-module">
           <img src="student2.jpg" alt="Student 2" class="staff-photo" />
-          <p class="staff-name">Bob Lee</p>
+          <div class="staff-name">Student Name</div>
         </div>
+      </div>
 
-        <div class="staff-module">
-          <img src="student3.jpg" alt="Student 3" class="staff-photo" />
-          <p class="staff-name">Claire Martin</p>
+      <a href="#home" class="back-button">Back to Home</a>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" style="display: none;">
+      <div class="publication-module">
+        <h3>Publications</h3>
+        <p>
+          Pan X, Liang H, et al. Regulatory and structural mechanisms of
+          PvrA-mediated regulation of the PQS quorum-sensing system and PHA
+          biosynthesis in <i>Pseudomonas aeruginosa</i>. <i>Journal of
+          Molecular Biology</i>, 2024, 12(1):123-135.
+        </p>
+      </div>
+
+      <div class="publication-module">
+        <p>
+          Li Z, Wang F, et al. Innate immune signaling in bacterial infection.
+          <i>Nature Reviews Microbiology</i>, 2024, 10(5):235-245.
+        </p>
+      </div>
+
+      <a href="#home" class="back-button">Back to Home</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="display: none;">
+      <div class="contact-module">
+        <img src="contact-image.jpg" alt="Contact Image" class="contact-image" />
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p>
+            Wu Lab<br />
+            Department of Biology, XYZ University<br />
+            Email: contact@wulab.org<br />
+            Phone: (123) 456-7890
+          </p>
         </div>
       </div>
 
@@ -297,40 +376,7 @@
     </section>
 
     <footer>
-      <p>&copy; 2024 My Website. All rights reserved.</p>
+      <p>&copy; 2024 Wu Lab. All rights reserved.</p>
     </footer>
-
-    <script>
-      // Function to handle navigation clicks
-      document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
-          // Hide all sections
-          document.querySelectorAll('main, section').forEach(section => {
-            section.style.display = 'none';
-          });
-          // Show selected section
-          const sectionID = this.getAttribute('href').substring(1);
-          document.getElementById(sectionID).style.display = 'block';
-        });
-      });
-
-      // Show home section by default
-      document.getElementById('home').style.display = 'block';
-
-      // Ensure footer only shows at the bottom of the home section
-      const footer = document.querySelector('footer');
-      const homeSection = document.getElementById('home');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            footer.style.display = 'block';
-          } else {
-            footer.style.display = 'none';
-          }
-        });
-      });
-      observer.observe(homeSection);
-    </script>
   </body>
 </html>
