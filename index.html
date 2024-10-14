@@ -17,7 +17,7 @@
 
       header {
         background-color: #215088;
-        color: #fff
+        color: #fff;
         text-align: center;
         padding: 4rem;
       }
@@ -57,7 +57,8 @@
       main {
         padding: 60px;
         max-width: 1200px;
-        margin: 0 auto; /* Center the content */
+        margin: 0 auto;
+        min-height: calc(100vh - 100px); /* Ensure footer is at the bottom */
       }
 
       footer {
@@ -65,12 +66,10 @@
         color: #333;
         text-align: center;
         padding: 0.5rem;
-        position: fixed;
-        bottom: 0;
         width: 100%;
+        margin-top: 20px; /* Allow footer to appear after content */
       }
 
-      /* Home image centered with rounded corners and overlay */
       .home-image {
         text-align: center;
         margin: 20px 0;
@@ -83,14 +82,13 @@
         border-radius: 15px;
       }
 
-      /* Semi-transparent overlay for improved text visibility */
       .home-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+        background: rgba(0, 0, 0, 0.4);
         border-radius: 15px;
       }
 
@@ -103,7 +101,7 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         font-size: 24px;
         text-align: center;
-        z-index: 1; /* Ensure the text is above the overlay */
+        z-index: 1;
       }
 
       .home-text-overlay h2 {
@@ -111,7 +109,6 @@
         margin: 0;
       }
 
-      /* Adjust page margins and ensure two news modules per row */
       .news-container {
         display: flex;
         flex-wrap: wrap;
@@ -119,7 +116,7 @@
         justify-content: space-between;
         margin-top: 20px;
         max-width: 1000px;
-        padding: 0 50px; /* Increased page margins */
+        padding: 0 50px;
         margin: 0 auto;
       }
 
@@ -129,7 +126,7 @@
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: calc(50% - 20px); /* Ensure two modules per row */
+        width: calc(50% - 20px);
         transition: transform 0.3s ease;
       }
 
@@ -143,7 +140,20 @@
         transform: scale(1.03);
       }
 
-      /* Staff module for Groups section */
+      /* Groups Section */
+      .group-title {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 40px;
+      }
+
+      .group-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
       .staff-module {
         display: flex;
         flex-direction: column;
@@ -209,7 +219,7 @@
     <main id="home">
       <div class="home-image">
         <img src="IMG_2042.jpg" alt="Description of image" />
-        <div class="home-overlay"></div> <!-- Semi-transparent overlay -->
+        <div class="home-overlay"></div>
         <div class="home-text-overlay">
           <h2>About Us</h2>
           <p>
@@ -224,19 +234,21 @@
 
     <!-- News Section -->
     <section id="news" style="display: none;">
-      <h2>Latest News</h2>
-
       <div class="news-container">
         <div class="news-image">
-          <img src="IMG_2041.PNG" alt="News 1" />
-          <h3>Regulatory and structural mechanisms of PvrA-mediated regulation of the PQS quorum-sensing system and PHA biosynthesis in Pseudomonas aeruginosa</h3>
-          <p>Authors: Xiaolei Pan, Han Liang, etc.</p>
+          <a href="https://example1.com" target="_blank">
+            <img src="IMG_2041.PNG" alt="News 1" />
+            <h3>Regulation of the PQS quorum-sensing system</h3>
+            <p>Authors: Xiaolei Pan, Han Liang, etc.</p>
+          </a>
         </div>
 
         <div class="news-image">
-          <img src="news-image2.jpg" alt="News 2" />
-          <h3>New Collaboration Announced</h3>
-          <p>Exciting collaboration with ABC University.</p>
+          <a href="https://example2.com" target="_blank">
+            <img src="news-image2.jpg" alt="News 2" />
+            <h3>New Collaboration Announced</h3>
+            <p>Exciting collaboration with ABC University.</p>
+          </a>
         </div>
       </div>
 
@@ -245,16 +257,40 @@
 
     <!-- Groups Section -->
     <section id="groups" style="display: none;">
-      <h2>Our Team</h2>
+      <div class="group-title">Advisors</div>
+      <div class="group-container">
+        <div class="staff-module">
+          <img src="advisor1.jpg" alt="Advisor 1" class="staff-photo" />
+          <p class="staff-name">Wu Weihui</p>
+        </div>
 
-      <div class="staff-module">
-        <img src="截屏2024-10-11 00.27.35.png" alt="Staff 1" class="staff-photo" />
-        <p class="staff-name">Wu Weihui</p>
+        <div class="staff-module">
+          <img src="advisor2.jpg" alt="Advisor 2" class="staff-photo" />
+          <p class="staff-name">Jane Smith</p>
+        </div>
+
+        <div class="staff-module">
+          <img src="advisor3.jpg" alt="Advisor 3" class="staff-photo" />
+          <p class="staff-name">John Doe</p>
+        </div>
       </div>
 
-      <div class="staff-module">
-        <img src="staff-photo2.jpg" alt="Staff 2" class="staff-photo" />
-        <p class="staff-name">Jane Smith</p>
+      <div class="group-title">Students</div>
+      <div class="group-container">
+        <div class="staff-module">
+          <img src="student1.jpg" alt="Student 1" class="staff-photo" />
+          <p class="staff-name">Alice Johnson</p>
+        </div>
+
+        <div class="staff-module">
+          <img src="student2.jpg" alt="Student 2" class="staff-photo" />
+          <p class="staff-name">Bob Lee</p>
+        </div>
+
+        <div class="staff-module">
+          <img src="student3.jpg" alt="Student 3" class="staff-photo" />
+          <p class="staff-name">Claire Martin</p>
+        </div>
       </div>
 
       <a href="#home" class="back-button">Back to Home</a>
@@ -281,6 +317,20 @@
 
       // Show home section by default
       document.getElementById('home').style.display = 'block';
+
+      // Ensure footer only shows at the bottom of the home section
+      const footer = document.querySelector('footer');
+      const homeSection = document.getElementById('home');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            footer.style.display = 'block';
+          } else {
+            footer.style.display = 'none';
+          }
+        });
+      });
+      observer.observe(homeSection);
     </script>
   </body>
 </html>
